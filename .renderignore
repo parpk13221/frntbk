@@ -1,0 +1,5 @@
+nexus-admin-backend/.git
+**/pom.xml
+**/build.gradle
+**/gradle/
+**/src/main
