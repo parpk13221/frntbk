@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nexus-admin-backend
+    env: node
+    branch: main
+    root: nexus-admin-backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
