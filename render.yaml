@@ -4,6 +4,11 @@ services:
     env: node
     branch: main
     root: nexus-admin-backend
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: npm ci --production
+    startCommand: node server.js
     plan: free
+
+    # Optional: ensure Render provides a PORT
+    envVars:
+      - key: PORT
+        value: "3000"
