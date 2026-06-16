@@ -4,6 +4,13 @@ services:
     env: node
     branch: main
     root: .
-    buildCommand: npm ci --production
+    buildCommand: |
+      pwd
+      echo "--- list root ---"
+      ls -la
+      echo "--- list src (if present) ---"
+      ls -la src || true
+      echo "--- continue install ---"
+      npm ci --production
     startCommand: node server.js
     plan: free
