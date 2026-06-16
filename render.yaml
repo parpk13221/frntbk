@@ -3,12 +3,7 @@ services:
     name: nexus-admin-backend
     env: node
     branch: main
-    root: nexus-admin-backend
+    root: .
     buildCommand: npm ci --production
     startCommand: node server.js
     plan: free
-
-    # Optional: ensure Render provides a PORT
-    envVars:
-      - key: PORT
-        value: "3000"
